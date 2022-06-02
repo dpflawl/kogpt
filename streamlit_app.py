@@ -55,7 +55,7 @@ def main():
                 "top_p": 0.9,
             }
 
-            query = requests.post("http://localhost:5000/generate", params=payload)
+            query = requests.post("https://share.streamlit.io/dpflawl/kogpt/main", params=payload)
             response = query.json()
 
             st.markdown(response["prompt"] + response["text"])
